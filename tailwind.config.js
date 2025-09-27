@@ -1,21 +1,27 @@
 export default {
-	content: [
-		"./index.html",
-		"./src/**/*.{js,ts,jsx,tsx,vue}",
-	],
-	theme: {
-		extend: {
-			fontFamily: {
-				vermin: ['VerminVibes'],
-				novega: ['Novega'],
-				knightWarrior: ['KnightWarrior'],
-				fastLines: ['FastLines'],
-				crossFly: ['CrossFly'],
-				speedPixel: ['speedPixel'],
-				speedPixelItalic: ['speedPixelItalic'],
-				brave81: ['Brave81']
-			}
-		},
-	},
-	plugins: [],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,vue}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        vermin: ["VerminVibes"],
+        novega: ["Novega"],
+        knightWarrior: ["KnightWarrior"],
+        fastLines: ["FastLines"],
+        crossFly: ["CrossFly"],
+        speedPixel: ["speedPixel"],
+        speedPixelItalic: ["speedPixelItalic"],
+        brave81: ["Brave81"],
+      },
+    },
+    keyframes: {
+      scalePulse: {
+        "0%, 100%": { transform: "scale(1)" },
+        "50%": { transform: "scale(1.025)" }, // slightly bigger
+      },
+    },
+    animation: {
+      scalePulse: "scalePulse 2s ease-in-out infinite", // 2s for slow speed
+    },
+  },
+  plugins: [],
 };
