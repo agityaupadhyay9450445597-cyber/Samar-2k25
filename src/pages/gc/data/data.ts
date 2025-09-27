@@ -1,15 +1,3 @@
-import cricketWebp from "../../../assets/gc/cricket.webp";
-import cricketJpg from "../../../assets/gc/cricket.jpg";
-import basketballWebp from "../../../assets/gc/basketball.webp";
-import basketballJpg from "../../../assets/gc/basketball.jpg";
-import tabletennisWebp from "../../../assets/gc/tabletennis.webp";
-import tabletennisJpg from "../../../assets/gc/tabletennis.jpg";
-import badmintonWebp from "../../../assets/gc/badminton.webp";
-import badmintonJpg from "../../../assets/gc/badminton.jpg";
-import footballWebp from "../../../assets/gc/football.webp";
-import footballJpg from "../../../assets/gc/football.jpg";
-
-
 export interface GameCardProps {
     title: string;
     webp: string;
@@ -25,36 +13,36 @@ export const games: GameDetails[] = [
     {
         id: "cricket",
         title: "Cricket",
-        webp: cricketWebp,
-        image: cricketJpg,
+        webp: "/assets/sports/cricket/cricket_2.webp",
+        image: "/assets/sports/cricket/cricket_2.jpg",
         description: "Exciting matches and tournaments for all cricket lovers.",
     },
     {
         id: "basketball",
         title: "Basketball",
-        webp: basketballWebp,
-        image: basketballJpg,
+        webp: "/assets/sports/basketball/basketball_2.webp",
+        image: "/assets/sports/basketball/basketball_2.jpg",
         description: "Singles and doubles tournaments for all skill levels.",
     },
     {
         id: "table-tennis",
         title: "Table Tennis",
-        webp: tabletennisWebp,
-        image: tabletennisJpg,
+        webp: "/assets/sports/tabletennis/tabletennis_2.webp",
+        image: "/assets/sports/tabletennis/tabletennis_2.jpg",
         description: "Fast-paced fun on the table every evening.",
     },
     {
         id: "badminton",
         title: "Badminton",
-        webp: badmintonWebp,
-        image: badmintonJpg,
+        webp: "/assets/sports/badminton/badminton_2.webp",
+        image: "/assets/sports/badminton/badminton_2.jpg",
         description: "Singles and doubles tournaments for all skill levels.",
     },
     {
         id: "football",
         title: "Football",
-        webp: footballWebp,
-        image: footballJpg,
+        webp: "/assets/sports/football/football_2.webp",
+        image: "/assets/sports/football/football_2.jpg",
         description: "Join our football community with weekly matches.",
     },
 ];
