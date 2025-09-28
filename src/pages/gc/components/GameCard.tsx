@@ -1,16 +1,16 @@
 // src/components/GameCard.tsx
 
 import React from "react";
-import { Game } from "../data/data"; 
+import { GameType } from "../data/schema";
 
 interface GameCardProps {
-  game: Game; 
-  onClick: (game: Game) => void; 
+  game: GameType;
+  onClick: (game: GameType) => void;
 }
 
 const GameCard: React.FC<GameCardProps> = ({ game, onClick }) => {
-  const { title, webp, image } = game; 
-  const jpg = image; 
+  const { title, webp, image } = game;
+  const jpg = image;
 
   return (
     <div
@@ -21,7 +21,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, onClick }) => {
     >
       <picture>
         <source srcSet={webp} type="image/webp" />
-        <source srcSet={jpg} type="image/jpeg" /> 
+        <source srcSet={jpg} type="image/jpeg" />
         <img src={jpg} alt={title} className="w-full h-48 object-cover " />
         <img
           src={jpg}
