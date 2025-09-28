@@ -34,10 +34,17 @@ const Popup: React.FC<PopupProps> = ({ game, onClose }) => {
               className="p-3 border rounded-md bg-gray-50 break-words whitespace-normal"
             >
               <p>Date: {match.date}</p>
-              <p>{match.team1}{match.team2 && <span> VS {match.team2}</span>}</p>
-              <p>
-                Winner: {(match.team2 && match.winner === 2) ? match.team2 : match.team1} ({match.points})
-              </p>
+              {match.team2 ? (
+                <>
+                  <p>{match.team1} VS {match.team2}</p>
+                  <p>
+                    Winner: {(match.winner === 2) ? match.team2 : match.team1} ({match.points})
+                  </p>
+                </>
+              ) : (
+                <p>Winner: {match.team1} </p>
+              )}
+
               {match.bestBatsman && <p>Best Batsman: {match.bestBatsman}</p>}
               {match.bestBowler && <p>Best Bowler: {match.bestBowler}</p>}
               {match.bestRunner && <p>Best Runner: {match.bestRunner}</p>}
