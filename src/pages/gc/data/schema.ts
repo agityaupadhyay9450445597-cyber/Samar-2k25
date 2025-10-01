@@ -6,30 +6,34 @@ export interface TeamType {
     image: string;
 }
 
-
-
-interface SportType {
+export interface SportType {
     title: string;
     webp: string;
     image: string;
     description: string;
 }
-type TeamId = typeof teams[number]["teamId"];
+
+export type TeamId = typeof teams[number]["teamId"];
+
 export interface SportsRecordType extends SportType {
-    matches: {
-        date: string;
-        team1Id: TeamId;
-        team1Points?: number;
-        team2Id?: TeamId;
-        team2Points?: number;
-        winner: TeamId;
-        points: number;
-        bestPlayers?: {
-            name: string;
-            title: string;
-            image: string;
-        }[];
-    }[];
+    matches: MatchType[];
+}
+
+export interface MatchType {
+    date: string;
+    team1Id: TeamId;
+    team1Points?: number;
+    team2Id?: TeamId;
+    team2Points?: number;
+    winner: TeamId;
+    points: number;
+    bestPlayers?: BestPlayerType[];
+}
+
+export interface BestPlayerType {
+    name: string;
+    title: string;
+    image: string;
 }
 
 // export interface GameType {
