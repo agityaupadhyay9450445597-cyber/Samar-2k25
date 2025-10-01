@@ -1,4 +1,4 @@
-import { teams } from "./data";
+import { teams } from "./data"; // Keep import for other uses like getting team names later
 
 export interface TeamType {
     teamId: string;
@@ -13,10 +13,17 @@ export interface SportType {
     description: string;
 }
 
-export type TeamId = typeof teams[number]["teamId"];
+// 🚨 CORRECTED: Simplify TeamId to avoid circular dependency
+export type TeamId = string; 
 
 export interface SportsRecordType extends SportType {
     matches: MatchType[];
+}
+
+export interface BestPlayerType {
+    name: string;
+    title: string;
+    image: string;
 }
 
 export interface MatchType {
@@ -28,44 +35,10 @@ export interface MatchType {
     winner: TeamId;
     points: number;
     bestPlayers?: BestPlayerType[];
+
+    // Added properties for the Popup component
+    bestBatsman?: string;
+    bestBowler?: string;
+    bestRunner?: string;
+    secondRunner?: string;
 }
-
-export interface BestPlayerType {
-    name: string;
-    title: string;
-    image: string;
-}
-
-// export interface GameType {
-//     title: string;
-//     webp: string;
-//     image: string;
-//     data: GameDataType;
-// }
-
-// export interface GameDataType {
-//     description: string;
-//     matches: MatchType[];
-// }
-
-// // Extract all possible team IDs for strong typing
-// export type TeamId = typeof teams[number]["teamId"];
-
-
-// interface BestPlayerType {
-//     name: string;
-//     title: string;
-//     image: string;
-// }
-
-// // 1. If only one team is mentioned, it means the value of the winner should be 1 by default.
-// export interface MatchType {
-//     date: string;
-//     team1Id: TeamId;
-//     team1Points?: number;
-//     team2Id?: TeamId;
-//     team2Points?: number;
-//     winner: TeamId;
-//     points: number;
-//     bestPlayers?: BestPlayerType[];
-// }

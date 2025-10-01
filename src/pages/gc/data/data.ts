@@ -16,7 +16,33 @@ export const teams: TeamType[] = [
     teamId: "team-3",
     name: "Team C",
     image: "/assets/sports/cricket/cricket_4.jpg",
+  },
+  {
+    teamId: "team-4",
+    name: "Team D",
+    image: "/assets/sports/cricket/cricket_5.jpg",
+  },
+  {
+    teamId: "team-5",
+    name: "Team E",
+    image: "/assets/sports/cricket/cricket_6.jpg",
+  },
+  {
+    teamId: "team-6",
+    name: "Team F",
+    image: "/assets/sports/cricket/cricket_7.jpg",
+  },
+  {
+    teamId: "team-7",
+    name: "Team G",
+    image: "/assets/sports/cricket/cricket_8.jpg",
+  },
+  {
+    teamId: "team-8",
+    name: "Team H",
+    image: "/assets/sports/cricket/cricket_9.jpg",
   }
+  
 ] as const;
 
 
@@ -32,7 +58,7 @@ export const games: SportsRecordType[] = [
         date: "2025-09-29",
         team1Id: "team-1",
         winner: "team-1",
-        points: 5,
+        points: 44,
         bestPlayers: [
           {
             name: "Player 1",
@@ -123,6 +149,166 @@ export const games: SportsRecordType[] = [
     ],
   },
   {
+    title: "kabaddi",
+    webp: "/assets/sports/kabaddi/kabaddi_2.webp",
+    image: "/assets/sports/kabaddi/kabaddi_2.jpg",
+    description: "Join our kabaddi community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  },
+   {
+    title: "KHO KHO",
+    webp: "/assets/sports/KHO KHO/KHO KHO_2.webp",
+    image: "/assets/sports/KHO KHO/KHO KHO_2.jpg",
+    description: "Join our KHO KHO community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  },
+   {
+    title: "CHESS",
+    webp: "/assets/sports/CHESS/CHESS_2.webp",
+    image: "/assets/sports/CHESS/CHESS_2.jpg",
+    description: "Join our CHESS community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  }, 
+  {
+    title: "ATHLETICS",
+    webp: "/assets/sports/ATHLETICS/ATHLETICS_2.webp",
+    image: "/assets/sports/ATHLETICS/ATHLETICS_2.jpg",
+    description: "Join our ATHLETICS community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  },
+   {
+    title: "TUG OF WAR",
+    webp: "/assets/sports/TUG OF WAR/TUG OF WAR_2.webp",
+    image: "/assets/sports/TUG OF WAR/TUG OF WAR_2.jpg",
+    description: "Join our TUG OF WAR community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  }, 
+  {
+    title: "FITNESS CHALLENGE",
+    webp: "/assets/sports/FITNESS CHALLENGE/FITNESS CHALLENGE_2.webp",
+    image: "/assets/sports/FITNESS CHALLENGE/FITNESS CHALLENGE_2.jpg",
+    description: "Join our FITNESS CHALLENGE community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  }, 
+  {
+    title: "HANDBALL",
+    webp: "/assets/sports/HANDBALL/HANDBALL_2.webp",
+    image: "/assets/sports/HANDBALL/HANDBALL_2.jpg",
+    description: "Join our HANDBALL community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+  }, 
+  {
+    title: "YOGA",
+    webp: "/assets/sports/YOGA/YOGA_2.webp",
+    image: "/assets/sports/YOGA/YOGA_2.jpg",
+    description: "Join our YOGA community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
+},
+{
     title: "Football",
     webp: "/assets/sports/football/football_2.webp",
     image: "/assets/sports/football/football_2.jpg",
@@ -141,5 +327,26 @@ export const games: SportsRecordType[] = [
         points: 8,
       },
     ],
+},
+{
+    title: "VOLLEYBALL",
+    webp: "/assets/sports/VOLLEYBALL/VOLLEYBALL_2.webp",
+    image: "/assets/sports/VOLLEYBALL/VOLLEYBALL_2.jpg",
+    description: "Join our volleyball community with weekly matches.",
+    matches: [
+      {
+        date: "2025-09-28",
+        team1Id: "team-1",
+        winner: "team-1",
+        points: 5,
+      },
+      {
+        date: "2025-09-27",
+        team1Id: "team-2",
+        winner: "team-2",
+        points: 8,
+      },
+    ],
   },
 ];
+

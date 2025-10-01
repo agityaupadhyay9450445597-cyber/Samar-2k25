@@ -12,30 +12,29 @@ import Registration2 from "./pages/register/Registration2.jsx";
 import SUC from "./pages/underConstruction.jsx";
 import GC from "./pages/gc/gc.jsx";
 import Footer from "./components/navigation/footer/footer";
+import Rank from "./pages/gc/components/Rank/RankTable.js";
 
 function RoutesConfig() {
-	return (
-		<>
-			<Router>
-				<Header />
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/merchandise' element={<Merchandise />} />
-					<Route path='/team' element={<Team />} />
-					<Route path='/contact' element={<Contact />} />
-					<Route path='/register' element={<Register />} />
-					<Route
-						path='/register/:sport'
-						element={<Registration2 />}
-					/>
-					<Route path='/gc' element={<GC />} />
-					<Route path='*' element={<SUC />} />
-				</Routes>
-				{/* <Footer /> */}
-			</Router>
-		</>
-	);
+  return (
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/merchandise" element={<Merchandise />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/register/:sport" element={<Registration2 />} />
+          <Route path="/gc" element={<GC />} />
+          <Route path="/gc/rank" element={<Rank />} />
+          <Route path="*" element={<SUC />} />
+        </Routes>
+        {/* <Footer /> */}
+      </Router>
+    </>
+  );
 }
 
 export default RoutesConfig;

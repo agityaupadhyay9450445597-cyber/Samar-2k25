@@ -1,14 +1,17 @@
 // src/components/GameCard.tsx
 
 import React from "react";
-import { GameType } from "../data/schema";
+// 🚨 CORRECTED: Import SportsRecordType instead of SportType
+import { SportsRecordType } from "../data/schema";
 
 interface GameCardProps {
-  game: GameType;
-  onClick: (game: GameType) => void;
+  // 🚨 CORRECTED: Prop must be SportsRecordType
+  game: SportsRecordType;
+  onClick: (game: SportsRecordType) => void;
 }
 
 const GameCard: React.FC<GameCardProps> = ({ game, onClick }) => {
+  // Destructuring is safe now, as SportsRecordType extends SportType
   const { title, webp, image } = game;
   const jpg = image;
 
@@ -26,7 +29,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, onClick }) => {
         <img
           src={jpg}
           alt={title}
-          className="absolute bottom-0 left-0 w-full h-10 object-cover blur"
+          className="absolute bottom-0 left-0 w-full h-10 object-contain blur"
         />
       </picture>
       <div className="bottom-0 left-5 absolute">
