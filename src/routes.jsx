@@ -5,12 +5,14 @@ import Header from "./components/navigation/header/header";
 import Home from "./pages/home/home";
 import About from "./pages/about/about";
 import Merchandise from "./pages/merchandise/merchandise";
-import Team from "./pages/team/team.jsx"
+import Team from "./pages/team/team.jsx";
 import Contact from "./pages/contact/contact";
 import Register from "./pages/register/register";
-import Registration2 from "./pages/register/Registration2.jsx"
+import Registration2 from "./pages/register/Registration2.jsx";
 import SUC from "./pages/underConstruction.jsx";
+import GC from "./pages/gc/gc.jsx";
 import Footer from "./components/navigation/footer/footer";
+import Rank from "./pages/gc/components/Rank/RankTable.js";
 
 function RoutesConfig() {
   return (
@@ -25,6 +27,8 @@ function RoutesConfig() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
           <Route path="/register/:sport" element={<Registration2 />} />
+          <Route path="/gc" element={<GC />} />
+          <Route path="/gc/rank" element={<Rank />} />
           <Route path="*" element={<SUC />} />
         </Routes>
         {/* <Footer /> */}
